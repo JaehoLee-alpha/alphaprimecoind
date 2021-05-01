@@ -5,7 +5,7 @@ import requests
 
 access = "xHpFvMel9wlKPAbpu0XJiR3GjC4L9HI7a7VrzUu3"
 secret = "xvrPmKJuGHewWRQLCvEyDlKpaz57gOtFybfsULg1"
-myToken = "xoxb-2018485285525-2045366418656-47P5QwfSOorCbQywGau4JYaw"
+myToken = "xoxb-2018485285525-2006845981895-Rk9q1vXAqMT0x3boNIf0PTMW"
 
 def post_message(token, channel, text):
     """슬랙 메시지 전송"""
@@ -59,7 +59,7 @@ while True:
         end_time = start_time + datetime.timedelta(days=1)
 
         if start_time < now < end_time - datetime.timedelta(seconds=10):
-            target_price = get_target_price("KRW-BTC", 0.5)
+            target_price = get_target_price("KRW-BTC", 0.45)
             ma15 = get_ma15("KRW-BTC")
             current_price = get_current_price("KRW-BTC")
             if target_price < current_price and ma15 < current_price:
